@@ -1,7 +1,7 @@
 package com.colak.springtutorial.repository;
 
-import com.colak.springtutorial.jpa.Person;
-import com.colak.springtutorial.jpa.PersonId;
+import com.colak.springtutorial.jpa.embeddableidasclass.Person;
+import com.colak.springtutorial.jpa.embeddableidasclass.PersonId;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

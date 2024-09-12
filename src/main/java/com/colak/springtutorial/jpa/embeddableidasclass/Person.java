@@ -1,4 +1,4 @@
-package com.colak.springtutorial.jpa;
+package com.colak.springtutorial.jpa.embeddableidasclass;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;

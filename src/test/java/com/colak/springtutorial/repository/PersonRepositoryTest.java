@@ -1,7 +1,7 @@
-package com.colak.springjpainheritancetutorial.repository;
+package com.colak.springtutorial.repository;
 
-import com.colak.springjpainheritancetutorial.jpa.Person;
-import com.colak.springjpainheritancetutorial.jpa.PersonId;
+import com.colak.springtutorial.jpa.Person;
+import com.colak.springtutorial.jpa.PersonId;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

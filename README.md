@@ -16,3 +16,41 @@ it must define the equals() and hashCode() methods
 primary key (first_name, last_name)
 ```
 
+# JPQL
+
+If we have an entity as below
+
+```
+@Embeddable
+@NoArgsConstructor
+@Getter
+public class OrderPK implements Serializable {
+ private int id;
+ private String type;
+
+ @Override
+ public boolean equals(Object o) {
+  ...
+ }
+
+ @Override
+ public int hashCode() {
+  ...
+ }
+}
+
+@Entity
+@Table(name = "orders")
+@Data
+public class Order {
+ @EmbeddedId
+ private OrderPK orderPK;
+ ...
+}
+```
+
+JPQL should be something like, we need to do one extra traversal:
+
+```
+SELECT o FROM Order o WHERE o.orderPK.id = :orderId AND o.orderPK.type = :orderType
+```
